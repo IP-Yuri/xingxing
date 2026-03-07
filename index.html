@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xing Xing Dining Club | The Velvet Curtain</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="hero-section avyr-reveal">
+        <figure class="hero-background">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLiiAH7qTT-vjLh3Y14gRtgAP2aevDl6Z-cOzPR07PerIUMqSMRHu4sfbT34ffaSRQrjUYdV7ww_oBBUfHuTceqgjjU8_502oUsY3lAcjSjoF-sSBvF2qjRlCjDli7_OMHPxAx8bIkXOHMRwriIPF5dL8OqLoQ2hJPGzr9ukeH_FvDzNqHqe0_v-WjOCPkfE5URjILs_8HQIUVEZMaF9E2nc2pK2tcRLPZVm2M_P_dYpfsSBktkS9CvfWOZT09vkPErrKQR7Ki2sM"
+                alt="Exclusive Club Interior" fetchpriority="high">
+            <div class="vignette-overlay"></div>
+        </figure>
+
+        <header class="hero-header">
+            <h1 class="brand-signature">Xing Xing</h1>
+        </header>
+
+        <section class="hero-content">
+            <h2 class="hero-title neon-text">WE SPEAKEASY HERE.</h2>
+            <p class="hero-subtitle">Asian Culinary Art & Live Rhythm. Casablanca.</p>
+
+            <div class="hero-action">
+                <a href="#guestlist" class="btn-primary">
+                    RÉSERVER UNE TABLE <span class="kinetic-arrow">↓</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <section class="editorial-section">
+
+        <article class="editorial-block avyr-reveal">
+            <figure class="editorial-figure">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPcK37uhykXLl3w8ONepuvt6gK6aYlvW8OeAIS0cn6qULYL7wmma0U3AWHzVu0dojqWaxDN95mKLfyfkYDY68JzMMzngVbP9tgwPVsI9ZMBo7qBVljhOHLU8_V4AT7I_xPCiwmKfjP9cVGTGPLd-nM0nQwYTPfwFRU9keGJbe5j31mDKCgIbfcW2MSjDOPtOMXrFRW3qUvYaS6NPgzzzb84rDZPdKkri70HBi9i29MDWHd6cbvhdC1es9Qao4rRpiUb2xIlE-uo9I"
+                    alt="Towering artistic sushi plating on dark ceramic" loading="lazy">
+            </figure>
+            <div class="editorial-meta">
+                <span class="act-marker">ACT I</span>
+                <h2 class="editorial-title">The Taste.</h2>
+                <div class="editorial-desc">
+                    <p>An avant-garde exploration of Eastern flavors, where precision meets the primitive heat of the
+                        wok.</p>
+                    <a href="menu.html" class="action-link">VIEW THE MENU</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="editorial-block layout-reverse avyr-reveal">
+            <figure class="editorial-figure">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN8csoka0jo8KefO8wrPWBDDsi1vX-hWGEfX3FfowxLLdrbyrcezyfEZ2OusZrzEsBCB4b3A9jEq_n0QMhe6gQihFJAY6ddb9efNm_dFnizlYTAWt_fc0T_5q5LEIRZWYWUKhKnrlIx_GcU_PF--4vHnDS3SgFbHM38jYWL1Js__1nx27ink7njbxfYDBboY5R06NwNPmaUxYfU-tX1YpEg2AXfMWcmb7We5SHovzTWH69xzBnpzA9rpjxGZ3f1oaWOaD1Ksj8OKQ"
+                    alt="Close up of a jazz singer under a harsh spotlight" loading="lazy">
+            </figure>
+            <div class="editorial-meta text-right">
+                <span class="act-marker">ACT II</span>
+                <h2 class="editorial-title">The Sound.</h2>
+                <div class="editorial-desc flex-end">
+                    <p>Deep brass, silk vocals, and the heartbeat of Casablanca. Live sessions that linger long after
+                        the last pour.</p>
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+    <section id="guestlist" class="vip-section avyr-reveal">
+        <header class="section-header">
+            <h2 class="section-title">SECURE YOUR ENTRY.</h2>
+            <p class="section-subtitle">Limited Engagements Only</p>
+        </header>
+
+        <form class="vip-form">
+            <div class="form-grid">
+                <fieldset class="input-group">
+                    <label for="patron-name">Patron Name</label>
+                    <input type="text" id="patron-name" class="input-minimal" placeholder="Identity" required>
+                </fieldset>
+
+                <fieldset class="input-group">
+                    <label for="experience">Experience Preference</label>
+                    <select id="experience" class="input-minimal">
+                        <option>The Chef's Counter</option>
+                        <option>Main Stage Lounge</option>
+                        <option>Hidden Parlor</option>
+                    </select>
+                </fieldset>
+
+                <fieldset class="input-group">
+                    <label for="party-size">Party Size</label>
+                    <input type="number" id="party-size" class="input-minimal" min="1" max="6" placeholder="Guests"
+                        required>
+                </fieldset>
+
+                <fieldset class="input-group">
+                    <label for="arrival">Arrival Time &amp; Date</label>
+                    <input type="datetime-local" id="arrival" class="input-minimal" required>
+                </fieldset>
+            </div>
+
+            <div class="form-action">
+                <button type="submit" class="btn-primary w-full">REQUEST VIP ACCESS</button>
+                <p class="form-disclaimer">SUBMISSION DOES NOT GUARANTEE ENTRY. WAIT FOR THE SIGNAL.</p>
+            </div>
+        </form>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">XING XING DINING CLUB</div>
+            <nav class="footer-nav">
+                <a href="#privacy">Privacy</a>
+                <a href="#contact">Contact</a>
+                <a href="#press">Press</a>
+            </nav>
+            <div class="footer-copyright">© CASABLANCA MMXXVI</div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

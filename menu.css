@@ -1,0 +1,320 @@
+/* ==========================================================================
+   AVYR ENGINEERING STANDARDS : XING XING MENU
+   ========================================================================== */
+
+:root {
+    /* Extraction: Color Palette */
+    --clr-obsidian: #0A0A0A;
+    --clr-brass: #B59451;
+    --clr-bone: #F4EFEA;
+    --clr-ash: #8A8A8A;
+    --clr-crimson: #7A101A;
+
+    /* Alpha variants */
+    --clr-brass-alpha-20: rgba(181, 148, 81, 0.2);
+    --clr-brass-alpha-30: rgba(181, 148, 81, 0.3);
+
+    /* Extraction: Typography */
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+    --font-cursive: 'Pinyon Script', cursive;
+
+    /* AVYR Spatial Metrics */
+    --spacing-sm: clamp(1rem, 2vw, 2rem);
+    --spacing-md: clamp(2rem, 5vw, 4rem);
+    --spacing-lg: clamp(4rem, 8vw, 6rem);
+    --container-max: 900px;
+    /* Constrained width for menu legibility */
+}
+
+/* ==========================================================================
+   RESET & FOUNDATION
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--clr-obsidian);
+    color: var(--clr-bone);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    background-color: var(--clr-brass);
+    color: var(--clr-obsidian);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+
+/* ==========================================================================
+   COMPONENTS
+   ========================================================================== */
+
+.btn-crimson {
+    background-color: var(--clr-crimson);
+    color: #FFFFFF;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+.btn-crimson:hover {
+    filter: brightness(1.2);
+    transform: translateY(-1px);
+}
+
+.btn-small {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.75rem;
+}
+
+.btn-large {
+    padding: 1rem 2.5rem;
+    font-size: 0.875rem;
+    box-shadow: 0 10px 30px rgba(122, 16, 26, 0.3);
+}
+
+/* ==========================================================================
+   LAYOUT ARCHITECTURE
+   ========================================================================== */
+
+/* Foyer Header (Sticky) */
+.foyer-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: var(--clr-obsidian);
+    border-bottom: 1px solid var(--clr-brass-alpha-30);
+}
+
+.foyer-top {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-retour {
+    color: var(--clr-brass);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-retour:hover {
+    color: var(--clr-bone);
+}
+
+.site-signature {
+    font-family: var(--font-cursive);
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: var(--clr-bone);
+}
+
+/* Category Navigation */
+.foyer-nav {
+    border-bottom: 1px solid var(--clr-brass-alpha-20);
+    padding: 1rem 0;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.foyer-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-categories {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: clamp(2rem, 5vw, 4rem);
+    padding: 0 var(--spacing-sm);
+    white-space: nowrap;
+}
+
+.nav-categories a {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(0.625rem, 1.5vw, 0.75rem);
+    color: var(--clr-brass);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-categories a:hover {
+    color: var(--clr-bone);
+}
+
+/* Main Content Container */
+.menu-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: var(--spacing-lg) var(--spacing-sm);
+}
+
+/* Menu Sections */
+.menu-section {
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.875rem, 4vw, 2.25rem);
+    text-align: center;
+    color: var(--clr-bone);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-md);
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Menu Items (Flexbox Dotted Line Architecture) */
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.item-header {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.item-name {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--clr-bone);
+    white-space: nowrap;
+}
+
+/* The Dotted Line - Flex Grow Implementation */
+.item-header::after {
+    content: '';
+    flex-grow: 1;
+    border-bottom: 1px dotted var(--clr-brass);
+    margin: 0 1rem 0.4rem 1rem;
+    opacity: 0.6;
+}
+
+.item-price {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    color: var(--clr-bone);
+    white-space: nowrap;
+}
+
+.item-description {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--clr-ash);
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    max-width: 85%;
+}
+
+/* Visual Intermission */
+.visual-intermission {
+    position: relative;
+    width: 80vw;
+    left: 50%;
+    transform: translateX(-50%);
+    height: clamp(500px, 50vh, 600px);
+    margin-bottom: var(--spacing-lg);
+    overflow: hidden;
+}
+
+.visual-intermission img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cinematic-scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.8));
+}
+
+/* Exit Terminal */
+.exit-terminal {
+    padding: var(--spacing-lg) 0;
+    border-top: 1px solid var(--clr-brass-alpha-20);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.terminal-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.5rem, 3vw, 1.875rem);
+    color: var(--clr-bone);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+}
+
+.terminal-copyright {
+    margin-top: 2rem;
+    font-size: 0.625rem;
+    color: var(--clr-ash);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+/* ==========================================================================
+   KINETICS
+   ========================================================================== */
+.avyr-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.avyr-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Override: Compose both transforms for the full-bleed image */
+.visual-intermission.avyr-reveal {
+    transform: translateX(-50%) translateY(30px);
+}
+
+.visual-intermission.avyr-reveal.is-visible {
+    transform: translateX(-50%) translateY(0);
+}
