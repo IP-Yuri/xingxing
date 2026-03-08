@@ -208,6 +208,7 @@ button {
 .item-header {
     display: flex;
     align-items: flex-end;
+    gap: 0.75rem;
     width: 100%;
 }
 
@@ -236,6 +237,7 @@ button {
     font-size: clamp(1.125rem, 2vw, 1.25rem);
     color: var(--clr-bone);
     white-space: nowrap;
+    order: 1;
 }
 
 .item-description {
@@ -294,6 +296,42 @@ button {
     color: var(--clr-ash);
     text-transform: uppercase;
     letter-spacing: 0.2em;
+}
+
+/* ==========================================================================
+   MOBILE ADJUSTMENTS — FOYER NAV
+   ========================================================================== */
+@media (max-width: 600px) {
+    .foyer-top {
+        height: 3.5rem;
+    }
+
+    .site-signature {
+        font-size: 1.6rem;
+    }
+
+    .foyer-nav {
+        padding: 0.5rem 0;
+    }
+
+    .nav-categories {
+        gap: 0.8rem;
+        padding: 0 0.75rem;
+    }
+
+    .nav-categories a {
+        font-size: 0.5rem;
+        letter-spacing: 0.08em;
+    }
+
+    .item-name,
+    .item-price {
+        font-size: 0.95rem;
+    }
+
+    .item-header::after {
+        margin: 0 0.5rem 0.3rem 0.5rem;
+    }
 }
 
 /* ==========================================================================
